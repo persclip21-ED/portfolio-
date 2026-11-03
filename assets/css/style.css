@@ -264,8 +264,12 @@ html.reveal-ready .reveal.is-visible { opacity: 1; transform: translateY(0); }
   .hero-visual { min-height: 370px; }
   .portrait-frame { width: min(250px, 68%); }
   .portrait-initials { font-size: 58px; }
-  .orbit { width: 290px; }.orbit-two { width: 340px; }
+  .orbit { width: 290px; }.orbit-two { width: min(370px, calc(100vw - 20px)); }
   .note-top { top: 47px; right: 0; }.note-bottom { bottom: 48px; left: 0; }
+  .note-orbit .floating-note { gap: 6px; padding: 7px 8px; font-size: 8px; }
+  .note-orbit .note-top { left: clamp(-84px, -19vw, -60px); }
+  .note-orbit .note-bottom { left: clamp(60px, 19vw, 84px); }
+  .note-icon { font-size: 18px; }.note-code { font-size: 14px; }
   .section-heading-row { display: block; }
   .section-heading-row .heading-aside { margin-top: 15px; }
   .about-facts { grid-template-columns: 1fr 1fr; gap: 20px 12px; }
