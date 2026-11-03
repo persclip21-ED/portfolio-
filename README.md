@@ -1,25 +1,30 @@
-<<<<<<< HEAD
 # Ed Cyrelle Lendio portfolio
 
-This is a dependency-free PHP and vanilla JavaScript portfolio for XAMPP. The site content is in `assets/js/portfolio.js`; update the skills, project entries and URLs, education, services, and social links there. The profile illustration uses initials so it does not imply a stock portrait is Ed.
+A static portfolio built with HTML, CSS, and vanilla JavaScript. The Vercel entry point is `index.html`; styles, scripts, and the profile photo are served from `assets/`.
 
-## Run locally
+## Deploy to Vercel
 
-1. Start Apache in the XAMPP Control Panel.
-2. Visit <http://localhost/PORTFOLIO/>.
+Import this repository in Vercel and keep the project root set to this directory. Choose the **Other** framework preset, leave the build command and output directory empty, and deploy. Vercel serves the root `index.html` directly; no dependencies or build step are needed.
 
-Alternatively, from this folder run `C:\xampp\php\php.exe -S localhost:8000` and visit <http://localhost:8000/>. Keep that terminal open while testing.
+The `.vercelignore` file keeps the preserved PHP files and the old `portfolio-` scaffold out of the public deployment. The live static page uses email, phone, GitHub, and Facebook links for contact, so it requires no mail server or secrets.
 
-## Enable contact email
+## Preview locally
 
-The form validates on the browser and server. It only reports success after PHP's configured mail transport accepts the message. Set `recipient` in `contact-config.php` to the inbox address, or set the `PORTFOLIO_CONTACT_EMAIL` environment variable. Configure the `mail` settings in `C:\xampp\php\php.ini` and restart Apache (or the PHP development server). If no recipient or mail transport is configured, the form displays a clear setup/delivery error; it never claims the message was sent.
+Open `index.html` directly in a browser, or serve this folder with Python:
 
-## Personalize before publishing
+```powershell
+py -m http.server 8000
+```
 
-- Replace the example project titles and descriptions in `assets/js/portfolio.js` with your own work and add its direct GitHub and live-demo URLs. Links are only shown when valid HTTP(S) URLs are supplied.
-- Replace the GitHub and LinkedIn search URLs in `portfolio.socials` with your profile URLs.
-- Update the course, school, and academic details in `portfolio.education`.
-- The project cover photos are served by Unsplash; swap the URLs for your own optimized images if desired.
-=======
-# portfolio-
->>>>>>> origin/main
+Then visit <http://localhost:8000/>.
+
+## Update portfolio content
+
+- Edit skills, education, services, contact details, and social profile URLs in `assets/js/portfolio.js`.
+- Add project entries to the `projects` array in `assets/js/portfolio.js` when ready.
+- Replace `assets/image.png` to update the profile photo used in the hero, header, and footer.
+- The site uses Google Fonts and Simple Icons from their CDNs; those assets require an internet connection.
+
+## Archived originals
+
+The original server-side files are preserved outside this project in `C:\xampp\htdocs\PORTFOLIO-legacy-php-backup`. The portfolio itself contains only static site files and has no PHP runtime or server-side contact form.
