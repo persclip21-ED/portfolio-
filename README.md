@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Ed Cyrelle Lendio portfolio
 
 This is a dependency-free PHP and vanilla JavaScript portfolio for XAMPP. The site content is in `assets/js/portfolio.js`; update the skills, project entries and URLs, education, services, and social links there. The profile illustration uses initials so it does not imply a stock portrait is Ed.
@@ -19,3 +20,6 @@ The form validates on the browser and server. It only reports success after PHP'
 - Replace the GitHub and LinkedIn search URLs in `portfolio.socials` with your profile URLs.
 - Update the course, school, and academic details in `portfolio.education`.
 - The project cover photos are served by Unsplash; swap the URLs for your own optimized images if desired.
+=======
+# portfolio-
+>>>>>>> origin/main
